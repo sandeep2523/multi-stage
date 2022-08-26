@@ -17,6 +17,12 @@ pipeline {
                 sh 'docker build -t newsandeep /maven/Dockerfile .'
             }
         }
+        stage ('DOCKER PUSH') {
+            steps {
+                sh 'docker tag newsandeep sandeep2523/newsandeep:1.0'
+                sh 'docker push sandeep2523/newsandeep:1.0'
+            }
+        }
         stage ('DOCKER run and deploy') {
             steps {
                 sh 'docker run -it -d -p 8070:8080 --name sandeep-conatiner newsandeep'
