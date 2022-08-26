@@ -1,7 +1,7 @@
 FROM maven AS BUILD
 WORKDIR /app
 COPY . /app
-COPY ../libraries /root/.m2
+COPY maven/libraries /root/.m2
 RUN cd ./target; ls
 RUN mvn clean package -Dmaven.test.skip=true
 
