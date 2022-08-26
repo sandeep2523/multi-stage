@@ -6,11 +6,11 @@ pipeline {
              git 'https://github.com/sandeep2523/multi-stage.git'
         }
        }
-        stage ('DOCKER Login') {
-            steps {
-                sh 'docker login -u="sandeep2523" -p="Sandeep@2523"'
-            }
-        }
+        //stage ('DOCKER Login') {
+          //  steps {
+            //    sh 'docker login -u="sandeep2523" -p="Sandeep@2523"'
+            //}
+        //}
         
         stage ('DOCKER BUILD') {
             when {
