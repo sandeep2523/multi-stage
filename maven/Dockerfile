@@ -2,7 +2,7 @@ FROM maven AS BUILD
 WORKDIR /app
 COPY . /app
 COPY maven/libraries /root/.m2
-RUN cd ./target; ls
+RUN cd maven/target; ls
 RUN mvn clean package -Dmaven.test.skip=true
 
 FROM tomcat:8.0-alpine
