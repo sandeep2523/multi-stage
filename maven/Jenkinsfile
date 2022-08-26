@@ -13,9 +13,9 @@ pipeline {
         //}
         
         stage ('DOCKER BUILD') {
-            when {
-                branch 'master'
-            }
+            //when {
+              //  branch 'master'
+            //}
             steps {
                 sh 'docker build -t newsandeep /maven/Dockerfile .'
             }
