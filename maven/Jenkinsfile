@@ -14,7 +14,7 @@ pipeline {
         
         stage ('DOCKER BUILD') {
             steps {
-                sh 'docker build -t newsandeep . -f /maven/Dockerfile'
+                sh 'docker build -t newsandeep . -f maven/Dockerfile'
             }
         }
         stage ('DOCKER PUSH') {
