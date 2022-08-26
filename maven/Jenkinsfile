@@ -8,7 +8,7 @@ pipeline {
        }
         stage ('DOCKER Login') {
            steps {
-               sh 'docker login -u="sandeep2523" -p="Sandeep@2523" registry-1.docker.io'
+               sh 'docker login -u="sandeep2523" --password-stdin="Sandeep@2523" registry-1.docker.io'
             }
         }
         
